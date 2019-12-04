@@ -35,7 +35,7 @@ public class Contact {
 //    @JoinColumn(name = "Phone_Book_Id")
 //    private PhoneBook phoneBook;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "User_Id")
     @JsonIgnore
     private User user;

@@ -29,4 +29,24 @@ public class ContactServiceImpl implements ContactService {
     public List<Contact> findAllContactsByUserId(int userId) {
         return contactRepository.findAllByUserId(userId);
     }
+
+    @Override
+    public Contact findByIdAndUserId(int id, int userId) {
+        return contactRepository.findContactByIdAndUserId(id, userId);
+    }
+
+    @Override
+    public void deleteContactById(int id) {
+        contactRepository.deleteById(id);
+    }
+
+    @Override
+    public Contact addContact(Contact contact) {
+        return contactRepository.save(contact);
+    }
+
+    @Override
+    public Contact findContactByPhoneNumber(String phoneNumber) {
+        return contactRepository.findContactByPhoneNumber(phoneNumber);
+    }
 }

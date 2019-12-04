@@ -15,19 +15,19 @@ values('grisha', 'rahlin');
 
 
 insert into contact (First_Name, Last_Name, Phone_Number, User_Id)
-values('ola', 'kutuzova', '89602358477', 1);
+values('ola', 'kutuzova', '+7960-235-84-77', 1);
 
 insert into contact (First_Name, Last_Name, Phone_Number, User_Id)
-values('masha', 'sov', '12345678', 1);
+values('masha', 'sov', '+123-45-678', 1);
 
 insert into contact (First_Name, Last_Name, Phone_Number, User_Id)
-values('anya', 'zinch', '246734781', 2);
+values('anya', 'zinch', '+246-73-47-81', 2);
 
 insert into contact (First_Name, Last_Name, Phone_Number, User_Id)
-values('kris', 'kiliiba', '63802465681', 2);
+values('kris', 'kiliiba', '+638-24-65-681', 2);
 
 insert into contact (First_Name, Last_Name, Phone_Number, User_Id)
-values('sveta', 'kurutkina', '987434567', 3);
+values('sveta', 'kurutkina', '+987-434-567', 3);
 
 insert into contact (First_Name, Last_Name, Phone_Number, User_Id)
-values('polina', 'balab', '79943245685', 2);
+values('polina', 'balab', '+7-994-324-56-85', 2);

@@ -29,7 +29,7 @@ public class User {
 //    @OneToMany(mappedBy = "user")
 //    private List<PhoneBook> phoneBook;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user",orphanRemoval = true, cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Contact> contacts;
 
