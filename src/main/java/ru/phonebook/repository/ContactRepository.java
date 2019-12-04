@@ -1,14 +1,7 @@
 package ru.phonebook.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 import ru.phonebook.model.Contact;
 
-import java.util.List;
-
-public interface ContactRepository extends JpaRepository<Contact, Integer> {
-    List<Contact> findAllByUserId(int id);
-
-    Contact findContactByIdAndUserId(int id, int userId);
-
-    Contact findContactByPhoneNumber(String phoneNumber);
+public interface ContactRepository extends PagingAndSortingRepository<Contact, Integer> {
 }

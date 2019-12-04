@@ -1,8 +1,15 @@
 package ru.phonebook.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import ru.phonebook.model.User;
 
-public interface UserRepository extends JpaRepository<User, Integer> {
-    User findUserByFirstName(String firstName);
+import java.util.List;
+
+@RepositoryRestResource(collectionResourceRel = "users", path = "users")
+public interface UserRepository extends PagingAndSortingRepository<User, Integer> {
+//    @Query("select u from user u where u.firstName like ''%s%''")
+    List<User> findByFirstNameLike(String name);
 }
