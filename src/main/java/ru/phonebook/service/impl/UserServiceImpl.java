@@ -1,7 +1,6 @@
 package ru.phonebook.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import ru.phonebook.model.User;
 import ru.phonebook.repository.UserRepository;
@@ -18,6 +17,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> findUserByName(String name) {
-        return userRepository.findByFirstNameLike(name);
+        return userRepository.findByFirstNameContaining(name);
     }
 }

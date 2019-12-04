@@ -11,5 +11,7 @@ import java.util.List;
 @RepositoryRestResource(collectionResourceRel = "users", path = "users")
 public interface UserRepository extends PagingAndSortingRepository<User, Integer> {
 //    @Query("select u from user u where u.firstName like ''%s%''")
-    List<User> findByFirstNameLike(String name);
+//    List<User> findByFirstNameLike(String name);
+
+    List<User> findByFirstNameContaining(String name);
 }
